@@ -5,7 +5,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<Title>Simple Http Client Framework</Title>
-		<Version>1.0.0</Version>
+		<Version>1.1.0</Version>
 		<Authors>Raven Crowe</Authors>
 		<Company>Minerva Softworks</Company>
 		<Product>Minerva.SimpleHttpClient.Framework</Product>
