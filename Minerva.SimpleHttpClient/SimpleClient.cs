@@ -34,6 +34,12 @@ public class SimpleClient : ISimpleClient {
         _client.DefaultVersionPolicy = _config.DefaultVersionPolicy ?? _client.DefaultVersionPolicy;
         _client.MaxResponseContentBufferSize = _config.MaxResponseContentBufferSize > 0 ? _config.MaxResponseContentBufferSize : _client.MaxResponseContentBufferSize;
         _client.Timeout = _config.Timeout ?? _client.Timeout;
+
+        if(config.DefaultRequestHeaders != null) {
+            foreach(var header in config.DefaultRequestHeaders) {
+                _client.DefaultRequestHeaders.Add (header.Key, header.Value);
+            }
+        }
     }
 
     public async Task<HttpResponseMessage> GetAsync (IRequestConfig config) => await _client.GetAsync (config.Target, config.HttpCompletionOption, config.CancellationToken);
