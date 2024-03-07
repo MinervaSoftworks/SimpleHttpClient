@@ -17,7 +17,7 @@
 
 namespace Minerva.SimpleHttpClient.Framework;
 
-public interface ISimpleHttpClient {
+public interface ISimpleClient {
     Task<HttpResponseMessage> GetAsync (IRequestConfig config);
 
     Task<HttpResponseMessage> PostAsync (IRequestWithContentConfig config);

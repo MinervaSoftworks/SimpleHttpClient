@@ -19,12 +19,12 @@ using Minerva.SimpleHttpClient.Framework;
 
 namespace Minerva.SimpleHttpClient;
 
-public class SimpleHttpClient : ISimpleHttpClient {
+public class SimpleClient : ISimpleClient {
     private readonly IClientConfig _config;
 
     private readonly HttpClient _client;
 
-    public SimpleHttpClient (IClientConfig config) {
+    public SimpleClient (IClientConfig config) {
         _config = config;
 
         _client = _config.ClientFactory.CreateClient ();

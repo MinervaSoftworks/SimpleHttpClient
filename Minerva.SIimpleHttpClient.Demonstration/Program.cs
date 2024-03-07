@@ -22,7 +22,7 @@ using System.Net.Http.Headers;
 
 var tokenSource = new CancellationTokenSource ();
 
-var client = new SimpleHttpClient (new ClientConfig());
+var client = new SimpleClient (new ClientConfig());
 
 var response = await client.GetAsync (new RequestConfig {
     Target = "posts/1",
